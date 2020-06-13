@@ -6,51 +6,38 @@ What is the largest prime factor of the number 600851475143 ?
 import logging
 logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
 
-# n = 1*3*5*11
-# primes = [2,3,5]
-# max_prim = primes[len(primes) - 1]
-# # logging.INFO(str(primes))
-# while True:
-#     for i in range(max_prim+1, max_prim*20):
-#         for j in primes:
-#             oszthato = False
-#             if not i % j:   # ha osztható egyik prímmel
-#                  oszthato = True
-#                  break
-#         if not oszthato:
-#             primes.append(i)
-#             # logging.INFO("added: %s" % i)
-#             # logging.INFO(str(primes))
-#     # logging.INFO("eddig ennyi: %s" % str(primes))
-#     max_prim = primes[len(primes) - 1]
-#     if max_prim >= n:
-#         break
-# print(primes)
-
-
-
-# n = 2*3*5*11*23
-szam = 3*3*3*5*7*7*19*29*29
+# szam = 3*3*3*5*7*7*19*29*29
+# szam = 600851475143
+szam = 60088353274839787834789251475143
 n = szam
 
 ig = n
 primes = []
 i_primes = -1
 i = 1
+hany = 0
 while True:
     if i >= ig:
         break
     i += 1
     if not n % i: # osztható
+        hany += 1
         primes.append([i,1,i])
         i_primes += 1
         ig /= i
         n = n / i
-        while not m % i:
+        while not n % i:
             primes[i_primes][1] += 1
             primes[i_primes][2] *= i
             ig /= i
             n = n/i
         print("új prim: %s" % i)
 
+j = 1
+for i in range(len(primes)):
+    j *= primes[i][2]
+
+print("szam:    %s" % szam)
+print("szorzat: %s" % j)
 print(primes)
+print(hany)
