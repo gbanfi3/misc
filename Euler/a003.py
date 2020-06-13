@@ -45,12 +45,12 @@ while True:
         primes.append([i,1,i])
         i_primes += 1
         ig /= i
-        m = n / i
+        n = n / i
         while not m % i:
             primes[i_primes][1] += 1
             primes[i_primes][2] *= i
             ig /= i
-            m = m/i
+            n = n/i
         print("új prim: %s" % i)
 
 print(primes)
