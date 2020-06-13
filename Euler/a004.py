@@ -5,12 +5,13 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 '''
 
 def palindrom(a):
-    if str(a) == str(a)[::-1]
+    if str(a) == str(a)[::-1]:
         return True
     else:
         return False
 
-for i in range(999,100,-1)
-    if palindrom(i):
+for i in range(999,953,-1):
+    if palindrom(i*i):
         print("ez az: %s" % i)
+        print(i*i)
         break
