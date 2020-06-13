@@ -5,10 +5,9 @@ What is the largest prime factor of the number 600851475143 ?
 '''
 import logging
 logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
-
-# szam = 3*3*3*5*7*7*19*29*29
+szam = 3*3*91*5*7*7*19*29*29*19
 # szam = 600851475143
-szam = 60088353274839787834789251475143
+# szam = 600881475143
 n = szam
 
 ig = n
