@@ -4,14 +4,9 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 '''
 
-def palindrom(a):
-    if str(a) == str(a)[::-1]:
-        return True
-    else:
-        return False
+list9 = [993,983,973,963,953]
 
-for i in range(999,953,-1):
-    if palindrom(i*i):
-        print("ez az: %s" % i)
-        print(i*i)
-        break
+for i in range(999999,900009,-1):
+    for j in list9:
+        if not i % j:
+            print("ez az: %s" % j)
