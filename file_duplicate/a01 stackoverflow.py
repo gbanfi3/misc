@@ -81,7 +81,8 @@ def check_for_duplicates(paths, hash=hashlib.sha1):
                 full_hash = get_hash(filename, first_chunk_only=False)
                 duplicate = hashes_full.get(full_hash)
                 if duplicate:
-                    print("Duplicate found: {} and {}".format(filename, duplicate))
+                    # print("Duplicate found: {} and {}".format(filename, duplicate))
+                    print("; {} ; {}".format(filename, duplicate))
                 else:
                     hashes_full[full_hash] = filename
             except (OSError,):
