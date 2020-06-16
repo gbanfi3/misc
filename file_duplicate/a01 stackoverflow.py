@@ -1,6 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
+# innen származik: https://stackoverflow.com/questions/748675/finding-duplicate-files-and-removing-them
+
 # if running in py3, change the shebang, drop the next import for readability (it does no harm in py3)
-from __future__ import print_function   # py2 compatibility
+# from __future__ import print_function   # py2 compatibility
+
 from collections import defaultdict
 import hashlib
 import os
