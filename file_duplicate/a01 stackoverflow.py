@@ -72,10 +72,14 @@ def check_for_duplicates(paths, hash=hashlib.sha1):
                 continue
 
     # For all files with the hash on the 1st 1024 bytes, get their hash on the full file - collisions will be duplicates
+    # print(len(hashes_on_1k))
     for aa, files_list in hashes_on_1k.items(): # aa helyett __ volt előtte
         size = aa[1] # ebben van a méret, a hash nem kell nekem
-        if len(files) < 2:
+        # print(size)
+        # print(str(files_list))
+        if len(files_list) < 2:
             continue    # this hash of fist 1k file bytes is unique, no need to spend cpy cycles on it
+        # print("hellóka")
 
         for filename in files_list:
             try: 
