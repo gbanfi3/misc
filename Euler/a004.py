@@ -8,5 +8,6 @@ list9 = [993,983,973,963,953]
 
 for i in range(999999,900009,-1):
     for j in list9:
-        if not i % j:
-            print("ez az: %s" % j)
+        if str(i) == str(i)[::-1]:
+            if not i % j:
+                print("ez az: %s * %s = %s" % (i,j, i/j))
